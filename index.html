@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-background" id="heartsBackground"></div>
+    
+    <!-- Stage 1: The Grand Entrance -->
+    <section class="stage active" id="stage1">
+        <div class="content fade-in">
+            <div class="heart-pulse">❤️</div>
+            <h1 class="magical-text">A Special Message</h1>
+            <h2 class="magical-text-sub">For Someone Extraordinary...</h2>
+            <button class="btn-primary" onclick="nextStage(2)">Enter ✨</button>
+        </div>
+    </section>
+
+    <!-- Stage 2: The Opening Letter -->
+    <section class="stage" id="stage2">
+        <div class="content">
+            <div class="photo-container">
+                <img src="images/photo1.jpg" alt="Sweet Cheeks" class="profile-photo">
+            </div>
+            <h1 class="typewriter">Hey Sweet Cheeks...</h1>
+            <div class="letter-content">
+                <p class="fade-in-text">There are so many things I want to say to you, but words seem inadequate to express what's in my heart.</p>
+                <p class="fade-in-text delay-1">You walked into my life and everything changed. The colors became brighter, the music sweeter, and every moment more meaningful.</p>
+                <p class="fade-in-text delay-2">I find myself thinking about you at the most random times... and smiling like an absolute fool.</p>
+                <p class="fade-in-text delay-3">So I created this little journey to show you just how much you mean to me...</p>
+            </div>
+            <button class="btn-primary" onclick="nextStage(3)">Keep Reading 💌</button>
+        </div>
+    </section>
+
+    <!-- Stage 3: What You Mean to Me -->
+    <section class="stage" id="stage3">
+        <div class="content">
+            <h1 class="glow-text">What You Mean to Me</h1>
+            <div class="floating-words">
+                <span class="float-word" style="--delay: 0s">Joy</span>
+                <span class="float-word" style="--delay: 0.5s">Happiness</span>
+                <span class="float-word" style="--delay: 1s">Comfort</span>
+                <span class="float-word" style="--delay: 1.5s">Peace</span>
+                <span class="float-word" style="--delay: 2s">Home</span>
+                <span class="float-word" style="--delay: 2.5s">Forever</span>
+            </div>
+            <div class="poem-text">
+                <p class="fade-in-text">Before you, I never knew that someone could feel like home.</p>
+                <p class="fade-in-text delay-1">Before you, I never understood what "butterflies" really meant.</p>
+                <p class="fade-in-text delay-2">Before you, I thought I knew what happiness was.</p>
+                <p class="fade-in-text delay-3">But you showed me that I had only seen a glimpse.</p>
+                <p class="fade-in-text delay-4">You are the melody in my silence, the color in my gray days,</p>
+                <p class="fade-in-text delay-5">and the reason I believe in magic.</p>
+            </div>
+            <button class="btn-primary" onclick="nextStage(4)">Continue 💫</button>
+        </div>
+    </section>
+
+    <!-- Stage 4: Memory Lane -->
+    <section class="stage" id="stage4">
+        <div class="content">
+            <h1 class="slide-in-text">Our Story 📸</h1>
+            <p class="subtitle">These moments made my heart yours...</p>
+            
+            <div class="memory-gallery">
+                <div class="memory-card">
+                    <img src="images/photo2.jpg" alt="Memory 1" class="memory-photo">
+                    <p class="memory-caption">The moment I knew you were special</p>
+                </div>
+                <div class="memory-card">
+                    <img src="images/photo3.jpg" alt="Memory 2" class="memory-photo">
+                    <p class="memory-caption">When you made me laugh until my cheeks hurt</p>
+                </div>
+                <div class="memory-card">
+                    <img src="images/photo4.jpg" alt="Memory 3" class="memory-photo">
+                    <p class="memory-caption">Every adventure is better with you</p>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="nextStage(5)">There's More 🌟</button>
+        </div>
+    </section>
+
+    <!-- Stage 5: Reasons I Adore You -->
+    <section class="stage" id="stage5">
+        <div class="content">
+            <h1 class="glow-text">Things I Love About You</h1>
+            <div class="counter" id="loveCounter">0</div>
+            <p class="counter-label">and counting...</p>
+            
+            <div class="reasons-container" id="reasonsContainer">
+                <p class="rotating-reason">Your smile that lights up my entire world</p>
+            </div>
+            
+            <div class="hearts-floating" id="floatingHearts"></div>
+            <button class="btn-primary" onclick="nextStage(6)">Next 💕</button>
+        </div>
+    </section>
+
+    <!-- Stage 6: My Promises -->
+    <section class="stage" id="stage6">
+        <div class="content">
+            <h1 class="elegant-text">My Promises to You 🌹</h1>
+            <div class="promises-container">
+                <div class="promise-item fade-in-text">
+                    <span class="promise-icon">💝</span>
+                    <p>I promise to always make you laugh, even on your hardest days</p>
+                </div>
+                <div class="promise-item fade-in-text delay-1">
+                    <span class="promise-icon">🌟</span>
+                    <p>I promise to be your biggest cheerleader and support your dreams</p>
+                </div>
+                <div class="promise-item fade-in-text delay-2">
+                    <span class="promise-icon">☕</span>
+                    <p>I promise to bring you coffee in bed and your favorite treats</p>
+                </div>
+                <div class="promise-item fade-in-text delay-3">
+                    <span class="promise-icon">🤗</span>
+                    <p>I promise to give you the best hugs and never let you feel alone</p>
+                </div>
+                <div class="promise-item fade-in-text delay-4">
+                    <span class="promise-icon">💖</span>
+                    <p>I promise to love you more with each passing day</p>
+                </div>
+            </div>
+            <div class="rose-petals" id="rosePetals"></div>
+            <button class="btn-primary" onclick="nextStage(7)">Almost There... 💫</button>
+        </div>
+    </section>
+
+    <!-- Stage 7: The Big Question -->
+    <section class="stage" id="stage7">
+        <div class="content question-stage">
+            <h2 class="pre-question">So, Sweet Cheeks...</h2>
+            <h1 class="the-question">Will You Be My Valentine? 💕</h1>
+            
+            <div class="sub-promises">
+                <p>✨ I promise to make you smile every day</p>
+                <p>🍫 I promise to bring you your favorite treats</p>
+                <p>🌹 I promise to be your biggest supporter</p>
+                <p>💖 I promise to love you more with each passing moment</p>
+            </div>
+            
+            <div class="button-container">
+                <button class="btn-yes" onclick="selectYes()">YES! 💕</button>
+                <button class="btn-no" id="noButton" onclick="moveNoButton()">Maybe...?</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 8: Celebration -->
+    <section class="stage" id="stage8">
+        <div class="content celebration">
+            <div class="confetti" id="confetti"></div>
+            <h1 class="celebration-title">YOU SAID YES! 🎉</h1>
+            <div class="celebration-photo">
+                <img src="images/photo5.jpg" alt="Us Together" class="couple-photo">
+            </div>
+            <div class="celebration-message">
+                <p class="big-text">You just made me the happiest person in the world!</p>
+                <p class="love-text">I can't wait to create a million more memories with you 💕</p>
+                <p class="quote">"In a sea of people, my eyes will always search for you."</p>
+            </div>
+            <button class="btn-primary pulse" onclick="nextStage(9)">But Wait... There's More! 🎊</button>
+        </div>
+    </section>
+
+    <!-- Stage 9: Dinner Reveal -->
+    <section class="stage" id="stage9">
+        <div class="content">
+            <h1 class="elegant-text">And to Celebrate This Special Occasion... 🍽️</h1>
+            
+            <div class="dinner-card">
+                <div class="dinner-icon">🕯️</div>
+                <h2 class="invitation-title">You're Invited to a Romantic Dinner</h2>
+                
+                <div class="dinner-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">🏛️</span>
+                        <div class="detail-content">
+                            <p class="detail-label">Restaurant</p>
+                            <p class="detail-value">[Your Favorite Restaurant Name]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon">📅</span>
+                        <div class="detail-content">
+                            <p class="detail-label">Date & Time</p>
+                            <p class="detail-value">[Date], [Time]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon">👗</span>
+                        <div class="detail-content">
+                            <p class="detail-label">Dress Code</p>
+                            <p class="detail-value">Dress to impress 😉</p>
+                        </div>
+                    </div>
+                    
+                    <div class="special-note">
+                        <p>💝 Get ready for an unforgettable evening filled with good food, great wine, and even better company. I can't wait to celebrate us! 💝</p>
+                    </div>
+                </div>
+                
+                <div class="dinner-decoration">🌹 🍷 🕯️ 🌹</div>
+            </div>
+            
+            <button class="btn-primary" onclick="nextStage(10)">One More Thing... 💫</button>
+        </div>
+    </section>
+
+    <!-- Stage 10: Perfect Ending -->
+    <section class="stage" id="stage10">
+        <div class="content final-stage">
+            <div class="sparkles" id="sparkles"></div>
+            <h1 class="elegant-text">This Is Just The Beginning... 🌙</h1>
+            
+            <div class="final-message">
+                <p class="final-text">Every love story is beautiful, but ours is my favorite.</p>
+                <p class="final-text">Thank you for saying yes.</p>
+                <p class="final-text">Thank you for being you.</p>
+                <p class="final-text">Thank you for choosing us.</p>
+            </div>
+            
+            <div class="final-quote">
+                <p>"I love you not only for what you are, but for what I am when I am with you."</p>
+                <p class="quote-author">- Roy Croft</p>
+            </div>
+            
+            <div class="final-hearts">💕 💖 💗 💓 💝</div>
+            
+            <p class="screenshot-text">📸 Screenshot this moment and send it to me! 📸</p>
+            
+            <div class="easter-egg-hint">✨ Click the hearts above for a surprise ✨</div>
+        </div>
+    </section>
+
+    <!-- Hidden Easter Egg Messages -->
+    <div class="modal" id="easterEggModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Secret Message 💕</h2>
+            <p id="secretMessage">You found the hidden message! I love you more than all the stars in the sky. You're my forever and always. 💖✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
