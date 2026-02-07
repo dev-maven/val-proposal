@@ -11,14 +11,10 @@ function nextStage(stageNumber) {
 
 	// Trigger specific animations for each stage
 	if (stageNumber === 5) {
-		startCounter();
-		startRotatingReasons();
-		createFloatingHearts();
-	} else if (stageNumber === 6) {
 		createRosePetals();
-	} else if (stageNumber === 8) {
+	} else if (stageNumber === 7) {
 		createConfetti();
-	} else if (stageNumber === 10) {
+	} else if (stageNumber === 9) {
 		createSparkles();
 	}
 
@@ -215,7 +211,7 @@ function moveNoButton() {
 }
 
 function selectYes() {
-	nextStage(8);
+	nextStage(7);
 }
 
 // ===== STAGE 8: CONFETTI =====
@@ -347,10 +343,98 @@ function closeModal() {
 // Close modal when clicking outside
 window.onclick = function (event) {
 	const modal = document.getElementById('easterEggModal');
+	const passwordModal = document.getElementById('passwordModal');
+	const secretRevealModal = document.getElementById('secretRevealModal');
+
 	if (event.target === modal) {
 		modal.style.display = 'none';
 	}
+	if (event.target === passwordModal) {
+		passwordModal.style.display = 'none';
+	}
+	if (event.target === secretRevealModal) {
+		secretRevealModal.style.display = 'none';
+	}
 };
+
+// ===== PASSWORD PROTECTED SECRET MESSAGE =====
+function showPasswordPrompt() {
+	const passwordModal = document.getElementById('passwordModal');
+	const passwordInput = document.getElementById('passwordInput');
+	const passwordError = document.getElementById('passwordError');
+
+	passwordModal.style.display = 'block';
+	passwordInput.value = '';
+	passwordError.textContent = '';
+
+	// Focus on input after a short delay
+	setTimeout(() => {
+		passwordInput.focus();
+	}, 100);
+}
+
+function closePasswordModal() {
+	const passwordModal = document.getElementById('passwordModal');
+	passwordModal.style.display = 'none';
+}
+
+function checkPassword() {
+	const passwordInput = document.getElementById('passwordInput');
+	const passwordError = document.getElementById('passwordError');
+	const correctPassword = '2512';
+
+	if (passwordInput.value === correctPassword) {
+		// Correct password - show secret message
+		closePasswordModal();
+		setTimeout(() => {
+			showSecretReveal();
+		}, 300);
+	} else {
+		// Wrong password
+		passwordError.textContent = '❌ Wrong password! Try again...';
+		passwordInput.value = '';
+		passwordInput.focus();
+
+		// Shake animation
+		passwordInput.style.animation = 'shake 0.5s';
+		setTimeout(() => {
+			passwordInput.style.animation = '';
+		}, 500);
+	}
+}
+
+function showSecretReveal() {
+	const secretRevealModal = document.getElementById('secretRevealModal');
+	secretRevealModal.style.display = 'block';
+}
+
+function closeSecretReveal() {
+	const secretRevealModal = document.getElementById('secretRevealModal');
+	secretRevealModal.style.display = 'none';
+}
+
+// Allow Enter key to submit password
+document.addEventListener('DOMContentLoaded', () => {
+	const passwordInput = document.getElementById('passwordInput');
+	if (passwordInput) {
+		passwordInput.addEventListener('keypress', (e) => {
+			if (e.key === 'Enter') {
+				checkPassword();
+			}
+		});
+	}
+});
+
+// Add shake animation for wrong password
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = `
+	@keyframes shake {
+		0%, 100% { transform: translateX(0); }
+		10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+		20%, 40%, 60%, 80% { transform: translateX(10px); }
+	}
+`;
+document.head.appendChild(shakeStyle);
 
 // ===== INITIALIZE =====
 document.addEventListener('DOMContentLoaded', () => {

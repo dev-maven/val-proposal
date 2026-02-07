@@ -49,11 +49,11 @@ Open `index.html` and search for these placeholders to customize:
 
 Place 5 photos in the `images/` folder:
 
-- `photo1.jpg` - Profile photo (400x400px recommended)
-- `photo2.jpg` - Memory photo 1 (600x600px recommended)
-- `photo3.jpg` - Memory photo 2 (600x600px recommended)
-- `photo4.jpg` - Memory photo 3 (600x600px recommended)
-- `photo5.jpg` - Couple photo (1000x800px recommended)
+- `photo1.jpeg` - Profile photo (400x400px recommended)
+- `photo2.jpeg` - Memory photo 1 (600x600px recommended)
+- `photo3.jpeg` - Memory photo 2 (600x600px recommended)
+- `photo4.jpeg` - Memory photo 3 (600x600px recommended)
+- `photo5.jpeg` - Couple photo (1000x800px recommended)
 
 ### 3. Customize Messages
 
@@ -179,11 +179,11 @@ val-proposal/
 │
 └── images/
     ├── README.md       # Photo guide
-    ├── photo1.jpg      # Profile photo placeholder
-    ├── photo2.jpg      # Memory 1 placeholder
-    ├── photo3.jpg      # Memory 2 placeholder
-    ├── photo4.jpg      # Memory 3 placeholder
-    └── photo5.jpg      # Couple photo placeholder
+    ├── photo1.jpeg      # Profile photo placeholder
+    ├── photo2.jpeg      # Memory 1 placeholder
+    ├── photo3.jpeg      # Memory 2 placeholder
+    ├── photo4.jpeg      # Memory 3 placeholder
+    └── photo5.jpeg      # Couple photo placeholder
 ```
 
 ## 🐛 Troubleshooting
@@ -192,7 +192,7 @@ val-proposal/
 
 - Check that photo filenames match exactly (case-sensitive)
 - Make sure photos are in the `images/` folder
-- Verify file extensions (.jpg or .png)
+- Verify file extensions (.jpeg or .png)
 
 **Animations not working?**
 

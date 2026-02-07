@@ -636,6 +636,15 @@ p {
 	animation: pulse 2s ease-in-out infinite;
 }
 
+.sign {
+	text-align: right;
+	font-size: 1.2em;
+	font-style: italic;
+	margin-top: 40px;
+	opacity: 0.9;
+	color: #ffffff;
+}
+
 /* ===== BUTTONS ===== */
 .btn-primary {
 	padding: 18px 50px;
@@ -701,6 +710,166 @@ p {
 #secretMessage {
 	font-size: 1.4em;
 	margin-top: 20px;
+}
+
+/* ===== PASSWORD PROTECTED SECRET MESSAGE ===== */
+.secret-unlock-section {
+	margin-top: 50px;
+	padding-top: 30px;
+	border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secret {
+	padding: 18px 50px;
+	font-size: 1.3em;
+	background: linear-gradient(135deg, #ff1493 0%, #ff6b9d 100%);
+	color: white;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 24px rgba(255, 20, 147, 0.4);
+	animation: secretPulse 2s ease-in-out infinite;
+}
+
+.btn-secret:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 12px 32px rgba(255, 20, 147, 0.6);
+}
+
+@keyframes secretPulse {
+	0%,
+	100% {
+		box-shadow: 0 8px 24px rgba(255, 20, 147, 0.4);
+	}
+	50% {
+		box-shadow: 0 8px 24px rgba(255, 20, 147, 0.8);
+	}
+}
+
+/* Password Modal Styles */
+.password-modal {
+	background: linear-gradient(135deg, #ff1493 0%, #ff6b9d 50%, #f093fb 100%);
+	padding: 50px 40px;
+}
+
+.password-hint {
+	font-size: 1.1em;
+	margin: 20px 0;
+	opacity: 0.95;
+}
+
+.password-instruction {
+	font-size: 1em;
+	margin: 10px 0;
+	opacity: 0.9;
+	font-style: italic;
+}
+
+.password-input {
+	width: 100%;
+	max-width: 200px;
+	padding: 15px 20px;
+	font-size: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	margin: 20px 0;
+	letter-spacing: 8px;
+	backdrop-filter: blur(10px);
+}
+
+.password-input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: normal;
+}
+
+.password-input:focus {
+	outline: none;
+	border-color: white;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.btn-unlock {
+	padding: 15px 40px;
+	font-size: 1.3em;
+	background: white;
+	color: #ff1493;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+}
+
+.btn-unlock:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4);
+}
+
+.password-error {
+	color: #ffff00;
+	font-size: 1.1em;
+	margin-top: 15px;
+	min-height: 25px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Secret Reveal Modal Styles */
+.secret-reveal {
+	background: linear-gradient(135deg, #ff0000 0%, #ff1493 50%, #ff6b9d 100%);
+	padding: 50px 40px;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+	animation: revealPulse 2s ease-in-out infinite;
+}
+
+@keyframes revealPulse {
+	0%,
+	100% {
+		box-shadow: 0 12px 48px rgba(255, 0, 0, 0.5);
+	}
+	50% {
+		box-shadow: 0 12px 48px rgba(255, 0, 0, 0.8);
+	}
+}
+
+.secret-message-content {
+	margin: 30px 0;
+}
+
+.secret-heading {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.secret-text {
+	font-size: 1.8em;
+	font-weight: bold;
+	line-height: 1.6;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	animation: secretGlow 2s ease-in-out infinite;
+}
+
+@keyframes secretGlow {
+	0%,
+	100% {
+		text-shadow:
+			2px 2px 8px rgba(0, 0, 0, 0.3),
+			0 0 20px rgba(255, 255, 255, 0.6);
+	}
+	50% {
+		text-shadow:
+			2px 2px 8px rgba(0, 0, 0, 0.3),
+			0 0 40px rgba(255, 255, 255, 0.9);
+	}
 }
 
 /* ===== RESPONSIVE ===== */
