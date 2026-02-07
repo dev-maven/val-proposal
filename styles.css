@@ -358,7 +358,7 @@ p {
 /* ===== STAGE 6: PROMISES ===== */
 .elegant-text {
 	font-family: 'Brush Script MT', cursive;
-	font-size: 3.5em;
+	font-size: 2em;
 }
 
 .promises-container {
@@ -394,7 +394,7 @@ p {
 }
 
 .pre-question {
-	font-size: 2.5em;
+	font-size: 2em;
 	margin-bottom: 20px;
 	opacity: 0.95;
 }
@@ -524,7 +524,7 @@ p {
 }
 
 .invitation-title {
-	font-size: 2.5em;
+	font-size: 2em;
 	margin-bottom: 40px;
 }
 
